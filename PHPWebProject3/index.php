@@ -25,4 +25,31 @@ echo '<br/>';
 
 echo Car::$_counterofCars;
 
-echo '<br/>'; 
+echo '<br/>';
+
+//значения одной переменной передаются другой по ссылке, если меняем какую то переменную то она меняет все связанные.
+$carone = new Car('Honda', 'Black', 300);
+$cartwo = $carone;
+print_r($carone);
+echo '<br/>';
+print_r($cartwo);
+$cartwo->color = 'yellow';
+echo '<br/>';
+print_r($cartwo);
+echo '<br/>';
+print_r($carone);
+echo '<br/>';
+
+print_r($carone==$cartwo);
+echo '<br/>';
+var_dump(boolval($carone==$cartwo));
+
+$a = new Car('Lexus', 'white', 250);
+$b = new Car('Lexus', 'white', 250);
+$c = $a;
+var_dump(boolval($a===$b));
+var_dump(boolval($a===$c));
+var_dump(boolval($a==$b));
+var_dump(boolval($a==$b));
+var_dump(boolval($a==$c));
+echo '<br/>';

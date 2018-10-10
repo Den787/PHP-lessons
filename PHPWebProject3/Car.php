@@ -15,6 +15,8 @@ class Car
     public $maxSpeed;
     public $currentSpeed =0;
 
+    const MAX_LIFTING_CAPASITY = 630;
+
     public static $_counterofCars =0;
 
     public function __construct($brand, $color , $maxSpeed){
