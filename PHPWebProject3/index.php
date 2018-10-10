@@ -1,7 +1,12 @@
 <?php
 
+
 include 'Car.php';
-$car = new Car("BMW", "black",120);
+include 'Mitsubishi.php';
+include 'BMW.php';
+include 'LancerEvolution.php';
+
+/* $car = new Car("BMW", "black",120);
 $vaz = new Car("2106", "white",150);
 
 $car->move(70);
@@ -23,7 +28,7 @@ print_r($newHonda);
 
 echo '<br/>';
 
-echo Car::$_counterofCars;
+// echo Car::$_counterofCars;
 
 echo '<br/>';
 
@@ -53,3 +58,20 @@ var_dump(boolval($a==$b));
 var_dump(boolval($a==$b));
 var_dump(boolval($a==$c));
 echo '<br/>';
+*/
+
+//Добавляем еще классы(наследование) и описываем класс Mitsubishi
+$mitsubishi2 = new Mitsubishi();
+$car2 = new Car('q');
+$mitsubishi2->brand='Mitsubishi';
+$mitsubishi2->move(10);
+var_dump($car2);
+echo '<br/>';
+var_dump($mitsubishi2);
+$mitsubishiLancer = new LancerEvolution();
+$mitsubishiLancer->move(90);
+$mitsubishiLancer->drift();
+echo '<br/>';
+var_dump($mitsubishiLancer);
+echo '<br/>';
+var_dump($mitsubishiLancer instanceof Car);

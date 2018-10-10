@@ -17,20 +17,20 @@ class Car
 
     const MAX_LIFTING_CAPASITY = 630;
 
-    public static $_counterofCars =0;
+ //   public static $_counterofCars =0;
 
-    public function __construct($brand, $color , $maxSpeed){
+   public function __construct($brand, $color = 'Black' , $maxSpeed = 500){
         $this->brand =$brand;
         $this->color=$color;
         $this->maxSpeed = $maxSpeed;
-        self::$_counterofCars++;
+     //   self::$_counterofCars++;
     }
 
-    public function __destruct(){
+    /*public function __destruct(){
         self::$_counterofCars--;
         echo self::$_counterofCars;
     }
-    
+    */
     public static function getCarWithRandomMaxSpeed(){
         return new Car('Honda', 'Green', rand(200,300));
     }
