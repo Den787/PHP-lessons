@@ -10,8 +10,8 @@
  */
 class Car
 {
-    protected $brand;
-    private $color;
+    private $brand;
+    protected $color;
     public $maxSpeed;
     public $currentSpeed =0;
 

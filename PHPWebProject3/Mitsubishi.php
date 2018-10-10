@@ -13,4 +13,14 @@ class Mitsubishi extends Car
   {
       parent::__construct('Mitsubishi', $color, $maxSpeed);
   }
+
+  public function setColor($color){
+        if($this->currentSpeed==0) {
+            $this->color = $color;
+        }
+  }
+  public function getColor(){
+        return $this->color;
+  }
+
 }
