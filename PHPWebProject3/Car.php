@@ -13,7 +13,7 @@ class Car
     private $brand;
     protected $color;
     public $maxSpeed;
-    public $currentSpeed =0;
+    protected $currentSpeed =0;
 
     const MAX_LIFTING_CAPASITY = 630;
 
@@ -36,11 +36,13 @@ class Car
     }
     
     public function move($speed) {
-        $this->currentSpeed = $speed;
+        $this->setSpeed($speed);
     }
     public function stop(){
-        $this->currentSpeed = 0;
+        $this->setSpeed(0);
     }
-
+    protected function setSpeed($speed){
+        $this->currentSpeed = $speed;
+    }
 
 }

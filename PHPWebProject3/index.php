@@ -80,6 +80,7 @@ var_dump($mitsubishiLancer instanceof Car);
 
 // inheritance Инкапсуляция(скорытие кода, функционала)
 //protected - доступен из всех подклассов, private только в текущем  -- и оба недоступны в самой программе(защита записи)
+// final перед классои, методом -запрещает наследование
 
 $Honda = new Car('Honda');
 $Honda->move(100);
