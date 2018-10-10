@@ -10,8 +10,8 @@
  */
 class Car
 {
-    public $brand;
-    public $color;
+    protected $brand;
+    private $color;
     public $maxSpeed;
     public $currentSpeed =0;
 
@@ -41,4 +41,6 @@ class Car
     public function stop(){
         $this->currentSpeed = 0;
     }
+
+
 }

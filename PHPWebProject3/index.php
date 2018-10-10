@@ -60,6 +60,7 @@ var_dump(boolval($a==$c));
 echo '<br/>';
 */
 
+/*
 //Добавляем еще классы(наследование) и описываем класс Mitsubishi
 $mitsubishi2 = new Mitsubishi();
 $car2 = new Car('q');
@@ -75,3 +76,11 @@ echo '<br/>';
 var_dump($mitsubishiLancer);
 echo '<br/>';
 var_dump($mitsubishiLancer instanceof Car);
+*/
+
+// inheritance Инкапсуляция(скорытие кода, функционала)
+//protected - доступен из всех подклассов, private только в текущем  -- и оба недоступны в самой программе(защита записи)
+
+$Honda = new Car('Honda');
+$Honda->move(100);
+var_dump($Honda);
