@@ -6,8 +6,13 @@ namespace models\patterns;
 class DBConnection
 {
     private static $_instance = null; //static - переменная одна на весь класс
+    private static $_connectParams = array(
+      '_host'=> 'localhost',
+      '_user'=> 'root',
+      '_db'=> 'test',
+        '_password' =>''
 
-    private $_port = null; //option field
+    );
 
     private function __construct(){} //не дает создать объект через new(кроме данного класса)
     private function __clone(){}     //ограничиваем
@@ -17,18 +22,12 @@ class DBConnection
     static public function getInstance() {
         if (is_null(self::$_instance))
         {
-            self::$_instance = new self(); //создаем себя через конструктор
+            self::$_instance = new \mysqli();
+            self::$_instance->connect(self::$_connectParams['_host'], self::$_connectParams['_user'], self::$_connectParams['_password'], self::$_connectParams['_db']);
         }
         return self::$_instance;
     }
 
 
-//============================================================
-    public function setPort($port){  ////// для наглядности
-        $this->_port = $port;
-    }
 
-    public function getPort(){
-        return $this->_port;
-    }
 }
